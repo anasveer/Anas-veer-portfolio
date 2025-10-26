@@ -49,7 +49,7 @@ export default function Hero() {
       id="home"
       className={`relative overflow-hidden ${
         isMobile
-          ? 'h-[120vh] pt-16 pb-10' // 🧩 smaller, tighter mobile layout
+          ? 'h-[120vh] pt-8 pb-10' // 🧩 smaller, tighter mobile layout
           : 'h-[130vh] sm:h-[110vh] md:h-screen pt-8 sm:pt-20'
       }`}
     >
@@ -134,7 +134,8 @@ export default function Hero() {
             </div>
 
             <p className="text-base sm:text-lg text-foreground/60 max-w-xl">
-              I build modern websites that combine elegant design, high performance, and SEO optimization.
+              I build modern, high-performing websites with elegant, responsive design.
+Each project is optimized for speed, SEO, and a seamless user experience.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -154,7 +155,7 @@ export default function Hero() {
 
             <div className="flex gap-3">
               {[{ icon: Github, href: 'https://github.com/anasveer', label: 'GitHub' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/anas-veer-8227b6360/', label: 'LinkedIn' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/anas-veer-9280aa346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
                 { icon: Mail, href: '#contact', label: 'Email' },
               ].map((social) => (
                 <motion.a
@@ -194,7 +195,7 @@ export default function Hero() {
                 animate={{ y: [0, -12, 0] }}
                 transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
                 whileHover={{ scale: 1.025, rotate: 1 }}
-                className="relative overflow-hidden w-52 h-52 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full border-2 border-primary shadow-lg "
+                className="relative overflow-hidden w-62 h-62 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full border-2 border-primary shadow-lg "
               >
                 <img
                   src="/upload/anas.jpeg"

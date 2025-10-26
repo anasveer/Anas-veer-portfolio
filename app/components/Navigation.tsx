@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export function Navigation() {
@@ -30,11 +30,14 @@ export function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-card/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        isScrolled || isMobileMenuOpen
+          ? 'bg-card/80 backdrop-blur-lg shadow-lg'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -76,7 +79,7 @@ export function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden py-4 space-y-4"
+            className="md:hidden py-4 space-y-4 bg-card/90 backdrop-blur-lg border-t border-border/40 rounded-b-lg"
           >
             {navItems.map((item) => (
               <a
