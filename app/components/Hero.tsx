@@ -49,7 +49,7 @@ export default function Hero() {
       id="home"
       className={`relative overflow-hidden ${
         isMobile
-          ? 'h-[100vh] pt-16 pb-10' // 🧩 smaller, tighter mobile layout
+          ? 'h-[120vh] pt-16 pb-10' // 🧩 smaller, tighter mobile layout
           : 'h-[130vh] sm:h-[110vh] md:h-screen pt-8 sm:pt-20'
       }`}
     >
@@ -175,7 +175,7 @@ export default function Hero() {
           {/* Right Column */}
           <div className="flex items-center justify-center lg:justify-end relative">
             <div className="relative">
-              {!isMobile && (
+              
                 <>
                   <motion.div
                     animate={{ scale: [1, 1.1, 1], rotate: [0, 180, 0] }}
@@ -188,13 +188,13 @@ export default function Hero() {
                     className="absolute -inset-2 bg-gradient-to-r from-secondary via-primary to-accent rounded-full opacity-40 blur-xl"
                   />
                 </>
-              )}
+            
 
               <motion.div
                 animate={{ y: [0, -12, 0] }}
                 transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
                 whileHover={{ scale: 1.025, rotate: 1 }}
-                className="relative overflow-hidden w-32 h-32 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full border-2 border-primary shadow-lg bg-white"
+                className="relative overflow-hidden w-52 h-52 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full border-2 border-primary shadow-lg "
               >
                 <img
                   src="/upload/anas.jpeg"
