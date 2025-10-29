@@ -204,7 +204,7 @@ html {
   background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
 }
 
-/* Infinite marquee animation */
+/* infinite slider */
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -214,10 +214,20 @@ html {
   }
 }
 
+/* Base speed (desktop) */
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  display: flex;
+  animation: marquee 14s linear infinite;
 }
 
+/* Pause on hover */
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* Mobile — slightly faster (not slower) */
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation: marquee 4s linear infinite;
+  }
 }

@@ -1,7 +1,6 @@
-'use client'
-import React from 'react';
-import { motion, useInView } from 'framer-motion';
-
+"use client";
+import React from "react";
+import { motion, useInView } from "framer-motion";
 
 // Tech Icon Component
 function TechIcon({ name, icon }: { name: string; icon: string }) {
@@ -15,37 +14,37 @@ function TechIcon({ name, icon }: { name: string; icon: string }) {
 
 export function Skills() {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skillCategories = [
     {
-      category: 'Frontend',
+      category: "Frontend",
       skills: [
-        { name: 'React', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Next.js', level: 88 },
-        { name: 'Tailwind CSS', level: 92 },
-        { name: 'Motion/Framer', level: 85 },
+        { name: "React", level: 95 },
+        { name: "TypeScript", level: 90 },
+        { name: "Next.js", level: 98 },
+        { name: "Tailwind CSS", level: 92 },
+        { name: "Motion/Framer", level: 85 },
       ],
     },
     {
-      category: 'Backend',
+      category: "Backend",
       skills: [
-        { name: 'Node.js', level: 88 },
-        { name: 'Express', level: 85 },
-        { name: 'PostgreSQL', level: 82 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'GraphQL', level: 78 },
+        { name: "Node.js", level: 88 },
+        { name: "Express.js", level: 85 },
+        { name: "Javascript", level: 82 },
+        { name: "MongoDB", level: 80 },
+        { name: "Rest Apis", level: 78 },
       ],
     },
     {
-      category: 'Tools & Others',
+      category: "Tools & Others",
       skills: [
-        { name: 'Git', level: 93 },
-        { name: 'Docker', level: 80 },
-        { name: 'AWS', level: 75 },
-        { name: 'Figma', level: 88 },
-        { name: 'CI/CD', level: 82 },
+        { name: "Git", level: 93 },
+        { name: "Github", level: 80 },
+        { name: "SEO Optimization", level: 85 },
+        { name: "Vercel", level: 75 },
+        { name: "VS Code", level: 92 },
       ],
     },
   ];
@@ -60,7 +59,7 @@ export function Skills() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-            My{' '}
+            My{" "}
             <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
               Skills
             </span>
@@ -96,8 +95,8 @@ export function Skills() {
                         animate={isInView ? { width: `${skill.level}%` } : {}}
                         transition={{
                           duration: 1,
-                          delay: 0.5 + (categoryIndex * 0.2) + (skillIndex * 0.1),
-                          ease: 'easeOut',
+                          delay: 0.5 + categoryIndex * 0.2 + skillIndex * 0.1,
+                          ease: "easeOut",
                         }}
                         className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
                       />
@@ -119,43 +118,47 @@ export function Skills() {
           <h3 className="text-xl font-bold mb-8 text-center text-foreground/80">
             Technologies I Work With
           </h3>
+
           
-          {/* Marquee Container */}
-          <div className="relative overflow-hidden">
-            {/* Gradient overlays for fade effect */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-card/30 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-card/30 to-transparent z-10 pointer-events-none" />
-            
-            {/* Scrolling content */}
-            <div className="flex gap-8 animate-marquee">
-              {/* First set */}
-              <div className="flex gap-8 min-w-max">
-                <TechIcon name="React" icon="⚛️" />
-                <TechIcon name="TypeScript" icon="📘" />
-                <TechIcon name="Node.js" icon="🟢" />
-                <TechIcon name="Tailwind" icon="🎨" />
-                <TechIcon name="Next.js" icon="▲" />
-                <TechIcon name="GraphQL" icon="◈" />
-                <TechIcon name="PostgreSQL" icon="🐘" />
-                <TechIcon name="Docker" icon="🐳" />
-                <TechIcon name="AWS" icon="☁️" />
-                <TechIcon name="Figma" icon="🎯" />
-              </div>
-              {/* Duplicate set for seamless loop */}
-              <div className="flex gap-8 min-w-max">
-                <TechIcon name="React" icon="⚛️" />
-                <TechIcon name="TypeScript" icon="📘" />
-                <TechIcon name="Node.js" icon="🟢" />
-                <TechIcon name="Tailwind" icon="🎨" />
-                <TechIcon name="Next.js" icon="▲" />
-                <TechIcon name="GraphQL" icon="◈" />
-                <TechIcon name="PostgreSQL" icon="🐘" />
-                <TechIcon name="Docker" icon="🐳" />
-                <TechIcon name="AWS" icon="☁️" />
-                <TechIcon name="Figma" icon="🎯" />
-              </div>
-            </div>
-          </div>
+{/* Marquee Container */}
+<div className="relative overflow-hidden">
+  {/* Gradient overlays for fade effect */}
+  <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-card/30 to-transparent z-10 pointer-events-none" />
+  <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-card/30 to-transparent z-10 pointer-events-none" />
+
+  {/* Scrolling content */}
+  <div className="flex gap-8 animate-marquee">
+    {/* First set */}
+    <div className="flex gap-8 min-w-max">
+      <TechIcon name="React" icon="⚛️" />
+      <TechIcon name="TypeScript" icon="📘" />
+      <TechIcon name="Node.js" icon="🟢" />
+      <TechIcon name="Tailwind" icon="🎨" />
+      <TechIcon name="Next.js" icon="▲" />
+      <TechIcon name="GraphQL" icon="◈" />
+      <TechIcon name="PostgreSQL" icon="🐘" />
+      <TechIcon name="Docker" icon="🐳" />
+      <TechIcon name="AWS" icon="☁️" />
+      <TechIcon name="Figma" icon="🎯" />
+    </div>
+
+    {/* Duplicate set for seamless loop */}
+    <div className="flex gap-8 min-w-max">
+      <TechIcon name="React" icon="⚛️" />
+      <TechIcon name="TypeScript" icon="📘" />
+      <TechIcon name="Node.js" icon="🟢" />
+      <TechIcon name="Tailwind" icon="🎨" />
+      <TechIcon name="Next.js" icon="▲" />
+      <TechIcon name="GraphQL" icon="◈" />
+      <TechIcon name="PostgreSQL" icon="🐘" />
+      <TechIcon name="Docker" icon="🐳" />
+      <TechIcon name="AWS" icon="☁️" />
+      <TechIcon name="Figma" icon="🎯" />
+    </div>
+  </div>
+</div>
+
+
         </motion.div>
       </div>
     </section>

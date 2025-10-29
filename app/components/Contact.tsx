@@ -33,20 +33,20 @@ export function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@johndoe.com',
-      href: 'mailto:hello@johndoe.com',
+      value: 'anasv8424@gmail.com',
+      href: 'mailto:anasv8424@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+92 3027534064',
+      href: 'tel:+923027534064',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
-      href: '#',
+      value: 'Faisalabad, Pakistan',
+      
     },
   ];
 
@@ -71,45 +71,69 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3 className="text-2xl font-bold mb-6">Let's Talk</h3>
-            <p className="text-foreground/70 mb-8">
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision. Feel free to reach out
-              through any of the following channels.
-            </p>
+       <div className="grid md:grid-cols-2 gap-12">
+  {/* Contact Info */}
+  <motion.div
+    initial={{ opacity: 0, x: -50 }}
+    animate={isInView ? { opacity: 1, x: 0 } : {}}
+    transition={{ duration: 0.6, delay: 0.2 }}
+  >
+    <h3 className="text-2xl font-bold mb-6">Let's Talk</h3>
+    <p className="text-foreground/70 mb-8">
+      I'm always open to discussing new projects, creative ideas, or
+      opportunities to be part of your vision. Feel free to reach out
+      through any of the following channels.
+    </p>
 
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <motion.a
-                  key={info.label}
-                  href={info.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  whileHover={{ x: 10 }}
-                  className="flex items-start gap-4 group"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <info.icon size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-foreground/80 mb-1">
-                      {info.label}
-                    </div>
-                    <div className="text-foreground group-hover:text-primary transition-colors duration-300">
-                      {info.value}
-                    </div>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
+   <div className="space-y-6">
+  {contactInfo.map((info, index) => (
+    <motion.div
+      key={info.label}
+      initial={{ opacity: 0, x: -20 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+      whileHover={{ x: 10 }}
+      className="pointer-events-auto"
+    >
+      <a
+        href={info.href}
+        onClick={(e) => {
+          if (!info.href) e.preventDefault();
+        }}
+        className={`flex items-start gap-4 group ${
+          info.href ? 'cursor-pointer' : 'cursor-default'
+        }`}
+        target={
+          info.href?.startsWith('http') ? '_blank' : undefined
+        }
+        rel={
+          info.href?.startsWith('http') ? 'noopener noreferrer' : undefined
+        }
+      >
+        <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+          <info.icon size={20} className="text-white" />
+        </div>
+
+        <div>
+          <div className="font-medium text-foreground/80 mb-1">
+            {info.label}
+          </div>
+          <div
+            className={`text-foreground transition-colors duration-300 ${
+              info.href
+                ? 'group-hover:text-primary hover:underline'
+                : 'group-hover:text-primary'
+            }`}
+          >
+            {info.value}
+          </div>
+        </div>
+      </a>
+    </motion.div>
+  ))}
+</div>
+
+
 
             {/* Social Links */}
             <motion.div
@@ -120,7 +144,7 @@ export function Contact() {
             >
               <h4 className="font-medium mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                {['GitHub', 'LinkedIn', 'Twitter', 'Dribbble'].map((platform) => (
+                {['GitHub', 'LinkedIn',].map((platform) => (
                   <motion.a
                     key={platform}
                     href="#"
@@ -215,7 +239,9 @@ export function Contact() {
             </form>
           </motion.div>
         </div>
+        
       </div>
+      
     </section>
   );
 }
