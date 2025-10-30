@@ -144,13 +144,14 @@ export function Contact() {
             >
               <h4 className="font-medium mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                {['GitHub', 'LinkedIn',].map((platform) => (
+                {[ 'LinkedIn'].map((platform) => (
                   <motion.a
                     key={platform}
-                    href="#"
+                    href="https://www.linkedin.com/in/anas-veer-9280aa346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'"
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-4 py-2 bg-card border border-primary/20 rounded-lg hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+                    target='blank'
                   >
                     {platform}
                   </motion.a>

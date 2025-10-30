@@ -28,10 +28,10 @@ export function PortfolioFooter() {
             >
               <Heart size={16} className="text-accent fill-accent" />
             </motion.span>{' '}
-            by John Doe © {new Date().getFullYear()}
+            by Anas Aslam © {new Date().getFullYear()}
           </p>
           <p className="text-sm text-foreground/50 mt-2">
-            Built with React, TypeScript, and Tailwind CSS
+            Built with Next, TypeScript, Framer motion and Tailwind CSS
           </p>
         </motion.div>
       </div>
