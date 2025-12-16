@@ -30,13 +30,23 @@ export function Projects() {
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
-      title: 'Frontend project',
+      title: 'Business Website',
       description:
         'Designed and developed a modern frontend project named Upwork using React and Tailwind CSS with a focus on responsive UI and smooth interactions.',
-      image: '/upwork.png',
+      image: '/aiverse.png',
       tags: ['React', 'CSS', 'Tailwind', 'Router' ],
     
-      live: 'https://anasveer.github.io/Upwork-website/',
+      live: 'https://www.aiverse.pk/',
+      gradient: 'from-pink-500 to-orange-500',
+    },
+      {
+      title: 'E-Commerce Website',
+      description:
+        'Designed and developed a modern frontend project named Upwork using React and Tailwind CSS with a focus on responsive UI and smooth interactions.',
+      image: '/bold.png',
+      tags: ['React', 'CSS', 'Tailwind', 'Router' ],
+    
+      live: 'https://www.boldwear.pk/',
       gradient: 'from-pink-500 to-orange-500',
     },
   ];

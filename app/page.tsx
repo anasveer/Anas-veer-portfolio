@@ -8,6 +8,7 @@ import { Contact } from './components/Contact';
 import { PortfolioFooter } from './components/PortfolioFooter';
 import { WhatsAppButton } from "./components/WhatsAppButton";
 
+
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -19,6 +20,7 @@ export default function App() {
       <Contact />
       <PortfolioFooter />
       <WhatsAppButton/>
+    
     </div>
   );
 }
